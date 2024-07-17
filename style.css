@@ -1,0 +1,180 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF0E6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #555;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+/* Section styles */
+section {
+    background-color: rgba(35, 45, 39, 0.461);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-family: 'Helvetica', sans-serif;
+    color: #444;
+}
+
+section p {
+    font-family: 'Georgia', serif;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+    
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #FAF0E6;
+}
+
+/* Form styles */
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: inline-block;
+    width: 100px;
+}
+
+form input, form textarea {
+    
+    width: calc(100% - 120px);
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color:rgba(35, 45, 39, 0.461);
+    
+}
+
+form input[type="submit"] {
+    
+    width: auto;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #111;
+}
+
+/* Footer styles */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+/* Book Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book {
+    background-color: #FAF0E6;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(25.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book img {
+    width: 70%;
+    height: 70%;
+    margin:20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.book p {
+    margin: 5px 0;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+.description {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#about-us{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+
