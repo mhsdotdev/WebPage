@@ -45,11 +45,9 @@ nav a:hover {
 
 /* Section styles */
 section {
-    background-color: rgba(35, 45, 39, 0.461);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: #FAF0E6;
+	margin:20px;
+	padding:20px;
 }
 
 section h2 {
@@ -85,16 +83,17 @@ th {
 
 /* Form styles */
 form {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
+	background-color:#444;
+	color:#FAF0E6;
+    margin: 5px;
+    padding: 5px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form label {
     display: inline-block;
     width: 100px;
+	text-align:left;
 }
 
 form input, form textarea {
@@ -105,14 +104,15 @@ form input, form textarea {
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color:rgba(35, 45, 39, 0.461);
+	color: #FAF0E6;
     
 }
 
 form input[type="submit"] {
     
     width: auto;
-    background-color: #444;
-    color: white;
+    background-color: #FAF0E6;
+    color: #444;
     border: none;
     cursor: pointer;
     padding: 10px 20px;
@@ -136,7 +136,7 @@ footer {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 }
 
 .book {
@@ -170,11 +170,45 @@ footer {
     text-align: center;
 }
 
-#about-us{
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
+.review{
+    background-color: #555;
+	color: #FAF0E6;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(25.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.test{
+	margin:20px auto;
+	background-color: #FAF0E6;
+	color: #FAF0E6;
+    border-radius: 0px;
+    padding: 10px;
+    width: 40%;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+.feedback{
+	margin:20px auto;
+	border-radius: 8px;
+	background-color: #444;
+	color: #FAF0E6;
+    padding: 10px;
+    width: 40%;
+    box-sizing: border-box;
+    text-align: center;
+    
 }
 
-
+#about-us{
+	background:#FAF0E6;
+	font-family: Arial, sans-serif;
+	text-align:bleft;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
