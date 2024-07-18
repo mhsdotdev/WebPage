@@ -6,6 +6,7 @@
     <title>Storyscape Publishers</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,40 +22,81 @@
             <li><a href="#">Feed Back</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Search for books...">
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
     </nav>
     <section>
             <h2>Featured Books</h2>
             <div class="gallery">
                 <div class="book">
-                    <img src="hide&seek.png" alt="Book 1 Cover" >
+                    <img src="assets/hide&seek.png" alt="Book 1 Cover" >
                     <div class ="description">
                         <p><h4>Hide and Seek</h4></p>
                         <p>Olivia Wilson</p>
                     </div>
                 </div>
                 <div class="book">
-                    <img src="fiction-novel-book-cover-template.jpg" alt="Book 2 Cover">
+                    <img src="assets/fiction-novel-book-cover-template.jpg" alt="Book 2 Cover">
                     <div class ="description">
                         <p><h4>Never Ending Sky</h4></p>
                         <p>Joseph Kirkland</p>
                     </div>
                 </div>
                 <div class="book">
-                    <img src="forrest-gump-1986.jpg" alt="Book 3 Cover">
+                    <img src="assets/forrest-gump-1986.jpg" alt="Book 3 Cover">
                     <div class ="description">
                         <p><h4>Forrest Gump</h4></p>
                         <p>Winston Groom </p>
                     </div>
                 </div>
                 <div class="book">
-                    <img src="notes.jpg" alt="Book 3 Cover">
+                    <img src="assets/notes.jpg" alt="Book 3 Cover">
                     <div class ="description">
                         <p><h4>Notes From Underground</h4></p>
                         <p>Fyodor Dostoevsky</p>
                     </div>
                 </div>
-				
+                <button id="viewAll">View All</button>
+                <script>
+                    $(document).ready(function() {
+                        $("#viewAll").click(function() {
+                            alert("Button clicked!");
+                        });
+                    });
+                </script>
+                <div class="book"></div>
+                <script>
+                    $(document).ready(function() {
+                        $("#viewAll").click(function() {
+                            $.ajax({
+                                url: "books.json",
+                                method: "GET",
+                                dataType: 'json',
+                                success: function(data) {
+                                    $.each(data, function(index, book) {
+                                        var bookHtml = `
+                                            <div class="book">
+                                                <img src="${book.image}">
+                                                <div class="description">
+                                                    <p><h4>${book.title}</h4></p>
+                                                    <p>${book.author}</p>
+                                                </div>
+                                            </div>
+                                        `;
+                                        $('.book').append(bookHtml);
+                                    });
+                                },
+                                error: function() {
+                                    alert('Error loading more books');
+                                }
+                            });
+                        });
+                    });
+                </script>
                 <!-- Add more books as needed -->
+                 
             </div>
     </section>
 
